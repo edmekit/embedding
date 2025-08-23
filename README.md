@@ -1,0 +1,1 @@
+# emebedded systems pratice using emulators
