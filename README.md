@@ -1,6 +1,6 @@
 # emebedded systems pratice using emulators
 
-**TRIED IN ESP32**
+**TRIED IN ESP32 in Wokwi**
 
 - so uhh apprantely, printIn allows one to print in the console i think so print() == Serial.printIn()
 
