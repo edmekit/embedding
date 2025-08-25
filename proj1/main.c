@@ -9,16 +9,33 @@ void setup() {
 }
 
 void setup() {
-  Serial.begin(9600);     // Start Serial communication at 9600 baud
-  pinMode(13, OUTPUT);    // Set pin 13 (built-in LED) as output
+  Serial.begin(9600);     
+  pinMode(13, OUTPUT);    
 }
 
 void loop() {
-  Serial.println("LED ON");   // Print to Serial Monitor
-  digitalWrite(13, HIGH);     // Turn LED on
-  delay(1000);                // Wait 1 second
+  Serial.println("LED ON");  
+  digitalWrite(13, HIGH);     
+  delay(1000);                
 
   Serial.println("LED OFF");
-  digitalWrite(13, LOW);      // Turn LED off
-  delay(1000);                // Wait 1 second
+  digitalWrite(13, LOW);      
+  delay(1000);
+  
+}
+
+void setup() {
+  pinMode(2, OUTPUT);
+  pinMode(4, INPUT_PULLUP);
+}
+
+void loop() {
+  if (digitalRead(4) == LOW)
+  {
+    digitalWrite(2, HIGH);
+  }
+  else
+  {
+    digitalWrite(2, LOW);
+  }
 }
