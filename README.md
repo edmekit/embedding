@@ -8,4 +8,4 @@
 
 - digitalRead() *reads* the state of the eneergy while digitalWrite() literally lets you write the energy.
 
-- played around states
+- played around  a ton of states
