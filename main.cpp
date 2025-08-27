@@ -107,20 +107,26 @@ void loop() {
 int buttonPin = 4;
 int ledPin = 2;
 bool lastState = HIGH;
-bool ledState = false;
+bool ledOn = false;
 
 void setup(){
   pinMode(ledPin, OUTPUT);
   pinMode(buttonPin, INPUT_PULLUP);
 }
 
+
 void loop(){
+
   bool buttonState = digitalRead(buttonPin);
 
+  //check if button was pressed
   if (lastState == HIGH && buttonState == LOW) 
   {
-    ledState = !ledState;
-    digitalWrite(2, ledState ? HIGH : LOW);
+    //switch state
+    ledOn = !ledOn;
+    digitalWrite(2, ledOn ? HIGH : LOW);
   }
+
+  //returns the lastState to always HIGH
   lastState = buttonState;
 }
