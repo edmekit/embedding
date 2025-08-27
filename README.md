@@ -9,3 +9,5 @@
 - digitalRead() *reads* the state of the eneergy while digitalWrite() literally lets you write the energy.
 
 - played around  a ton of states
+
+- learned this ? shorthand for if-else in C++ lmao
