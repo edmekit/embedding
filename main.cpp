@@ -101,3 +101,26 @@ void loop() {
   delay(100);
   digitalWrite(22, LOW);
 }
+
+
+// toggle button
+int buttonPin = 4;
+int ledPin = 2;
+bool lastState = HIGH;
+bool ledState = false;
+
+void setup(){
+  pinMode(ledPin, OUTPUT);
+  pinMode(buttonPin, INPUT_PULLUP);
+}
+
+void loop(){
+  bool buttonState = digitalRead(buttonPin);
+
+  if (lastState == HIGH && buttonState == LOW) 
+  {
+    ledState = !ledState;
+    digitalWrite(2, ledState ? HIGH : LOW);
+  }
+  lastState = buttonState;
+}
